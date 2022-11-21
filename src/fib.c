@@ -4,6 +4,7 @@
 #include <stdio.h>		/* printf */
 
 /* Fibonacci numbers defined recursively */
+/* solely used to compare large fibonacci numbers when running myfib()*/
 int fib(int n)
 {
     /* pre-condition */
@@ -17,13 +18,15 @@ int fib(int n)
         return fib(n - 1) + fib(n - 2);
 }
 
-/* Fibonacci function definition */
+// tail-recursive fibonacci function. 
+// When function funs recursively, pp is used as input for p. 
+// p is added to pp, thereby going through the fibonacci numbers as the function recurses. 
 int myfib(int n, int p, int pp)
 {
     assert(n >= 1);
-    
+
     if (n == 1) {
-        return p; 
+        return p;
     }
     else if (n == 2) {
         return pp;

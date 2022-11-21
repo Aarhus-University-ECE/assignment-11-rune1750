@@ -38,7 +38,7 @@ TEST_CASE("fib")
     // Add the tests for excercise 4 "fib" function here. Use "REQUIRE()" statement to check. 
     REQUIRE(myfib(2, 0, 1) == 1);
     REQUIRE(myfib(9, 0, 1) == 21);
-   // REQUIRE(myfib(100, 0, 1) == fib(100));
+    REQUIRE(myfib(100, 0, 1) == fib(100));
 }
 
 

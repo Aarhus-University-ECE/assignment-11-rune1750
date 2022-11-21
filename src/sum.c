@@ -16,6 +16,7 @@ int sum(int n)
 }
 
 /* Sum integers 1 to n */
+// total is used to store the sum, n is added to total and reduced by 1 everytime the function recurses
 int sumtail(int n, int total)
 {
   assert(n >= 1);
@@ -23,18 +24,19 @@ int sumtail(int n, int total)
     return total + 1;
   }
   else {
-    return sumtail(n - 1, n + total); 
+    return sumtail(n - 1, n + total);
   }
 }
 
 /* Sum integers 1 to n */
+// total is used to store the sum, n is added to total and reduced by 1 everytime the loop runs
 int sumwhile(int n)
 {
   assert(n >= 1);
   int total = 0;
   while (n > 0) {
     total += n;
-    n--; 
+    n--;
   }
   return total;
 }
